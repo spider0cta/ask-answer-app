@@ -2,6 +2,7 @@ package dev.muhammad.askanswerapp.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 
@@ -18,4 +19,8 @@ public class Comment extends Auditable{
     //Link
     @ManyToOne
     private Link link;
+
+    public Comment(String s, Link link) {
+        super();
+    }
 }
