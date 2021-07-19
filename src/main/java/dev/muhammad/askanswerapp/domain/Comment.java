@@ -3,9 +3,7 @@ package dev.muhammad.askanswerapp.domain;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -17,4 +15,7 @@ public class Comment {
     private long id;
     private String body;
 
+    //Link
+    @ManyToOne
+    private Link link;
 }
