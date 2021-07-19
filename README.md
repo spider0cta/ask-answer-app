@@ -3,7 +3,7 @@ Ask - Answer Portal
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-[Spring Boot](http://projects.spring.io/spring-boot/) FullStack App.
+[Spring Boot](http://projects.spring.io/spring-boot/) FullStack App [Stackoverfloe - Reddit Clone].
 
 
 ## Requirements
