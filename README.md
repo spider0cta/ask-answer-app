@@ -1,8 +1,6 @@
 Ask - Answer Portal
 ====================
 
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-
 [Spring Boot](http://projects.spring.io/spring-boot/) FullStack App [Stackoverfloe - Reddit Clone].
 
 
@@ -52,3 +50,7 @@ oc expose aapo --hostname=www.example.com
 you can check these links :
 * [Deploying on AWS Using AWS Elastic Beanstalk](https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/)
 * [Deploying a Spring Boot Application - docs](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html)
+
+#### Note :
+ - consider addng bootstrap js - css lib in the lib dir 
+ - configure the missing tables in your local db
