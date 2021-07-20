@@ -1,5 +1,7 @@
 package dev.muhammad.askanswerapp.controller;
 
+import dev.muhammad.askanswerapp.domain.User;
+import dev.muhammad.askanswerapp.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
