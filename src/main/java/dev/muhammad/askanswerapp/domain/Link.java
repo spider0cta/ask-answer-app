@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.URL;
 import org.ocpsoft.prettytime.PrettyTime;
 
 import javax.persistence.*;
+import javax.validation.*;
 import javax.validation.constraints.NotEmpty;
 import java.net.URI;
 import java.net.URISyntaxException;

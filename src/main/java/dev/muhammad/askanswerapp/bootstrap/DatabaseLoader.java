@@ -1,9 +1,15 @@
 package dev.muhammad.askanswerapp.bootstrap;
 
+import dev.muhammad.askanswerapp.domain.Comment;
 import dev.muhammad.askanswerapp.domain.Link;
+import dev.muhammad.askanswerapp.domain.Role;
+import dev.muhammad.askanswerapp.domain.User;
 import dev.muhammad.askanswerapp.repository.CommentRepository;
 import dev.muhammad.askanswerapp.repository.LinkRepository;
+import dev.muhammad.askanswerapp.repository.RoleRepository;
+import dev.muhammad.askanswerapp.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
