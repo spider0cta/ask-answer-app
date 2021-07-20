@@ -1,26 +1,42 @@
 package dev.muhammad.askanswerapp.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import dev.muhammad.askanswerapp.service.BeanUtil;
+import lombok.*;
+import org.ocpsoft.prettytime.PrettyTime;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 
 @Entity
-@Data
+@RequiredArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
-public class Comment extends Auditable{
+public class Comment extends Auditable {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
+
+    @NonNull
     private String body;
 
-    //Link
     @ManyToOne
+    @NonNull
     private Link link;
 
-    public Comment(String s, Link link) {
-        super();
+    public String getPrettyTime() {
+        PrettyTime pt = BeanUtil.getBean(PrettyTime.class);
+        return pt.format(convertToDateViaInstant(getCreationDate()));
     }
+
+    private Date convertToDateViaInstant(LocalDateTime dateToConvert) {
+        return java.util.Date.from(dateToConvert.atZone(ZoneId.systemDefault()).toInstant());
+    }
+
 }
