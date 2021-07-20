@@ -2,7 +2,6 @@ package dev.muhammad.askanswerapp.domain.validator;
 
 
 import dev.muhammad.askanswerapp.domain.User;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
