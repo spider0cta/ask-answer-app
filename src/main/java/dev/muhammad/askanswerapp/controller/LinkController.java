@@ -1,7 +1,10 @@
 package dev.muhammad.askanswerapp.controller;
 
+import dev.muhammad.askanswerapp.domain.Comment;
 import dev.muhammad.askanswerapp.domain.Link;
 import dev.muhammad.askanswerapp.repository.LinkRepository;
+import dev.muhammad.askanswerapp.service.CommentService;
+import dev.muhammad.askanswerapp.service.LinkService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

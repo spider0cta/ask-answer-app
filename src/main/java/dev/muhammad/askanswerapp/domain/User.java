@@ -1,5 +1,6 @@
 package dev.muhammad.askanswerapp.domain;
 
+import dev.muhammad.askanswerapp.domain.validator.PasswordsMatch;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

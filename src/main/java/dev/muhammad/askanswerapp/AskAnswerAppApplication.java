@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
 
@@ -27,5 +29,10 @@ public class AskAnswerAppApplication {
     @Bean
     public SpringSecurityDialect securityDialect() {
         return new SpringSecurityDialect();
+    }
+
+    @Bean
+    public JavaMailSender javaMailSender(){
+        return new JavaMailSenderImpl();
     }
 }

@@ -3,6 +3,7 @@ package dev.muhammad.askanswerapp.service;
 import dev.muhammad.askanswerapp.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
@@ -16,10 +17,12 @@ import java.util.Locale;
 @Service
 public class MailService {
 
+
     private final Logger log = LoggerFactory.getLogger(MailService.class);
     private final SpringTemplateEngine templateEngine;
+    @Autowired
     private final JavaMailSender javaMailSender;
-    private final String BASE_URL = "http://localhost:8080";
+    private final String BASE_URL = "http://localhost:1010";
 
     public MailService(JavaMailSender javaMailSender, SpringTemplateEngine templateEngine) {
         this.javaMailSender = javaMailSender;

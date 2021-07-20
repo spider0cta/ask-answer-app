@@ -1,5 +1,6 @@
 package dev.muhammad.askanswerapp.config;
 
+import dev.muhammad.askanswerapp.domain.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.context.SecurityContextHolder;
 
