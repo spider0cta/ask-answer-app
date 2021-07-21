@@ -1,7 +1,7 @@
 Ask - Answer Portal
 ====================
 
-[Spring Boot](http://projects.spring.io/spring-boot/) FullStack App [Stackoverfloe - Reddit Clone].
+[Spring Boot](http://projects.spring.io/spring-boot/) FullStack App [Stackoverflow - Reddit Clone].
 
 
 ## Requirements
@@ -52,5 +52,5 @@ you can check these links :
 * [Deploying a Spring Boot Application - docs](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html)
 
 #### Note :
- - consider addng bootstrap js - css lib in the lib dir 
+ - consider adding bootstrap js - css lib in the lib dir 
  - configure the missing tables in your local db
