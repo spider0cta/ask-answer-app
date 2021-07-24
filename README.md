@@ -14,7 +14,7 @@ For building and running the application you need
 
 ## Running the application locally
 
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `dev.muhammad.aapo.AapoApplication.java` class from your IDE.
+There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `dev.muhammad.askanswerapp.AskAnswerAppApplication.java` class from your IDE.
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
@@ -34,15 +34,15 @@ oc new-app codecentric/springboot-maven3-centos~https://github.com/Urodacus/ask-
 This will create:
 
 * An ImageStream called "springboot-maven3-centos"
-* An ImageStream called "aapo"
-* A BuildConfig called "aapo"
-* DeploymentConfig called "aapo"
-* Service called "aapo"
+* An ImageStream called "askanswerapp"
+* A BuildConfig called "askanswerapp"
+* DeploymentConfig called "askanswerapp"
+* Service called "askanswerapp"
 
-If you want to access the app from outside your OpenShift installation, you have to expose the aapo service:
+If you want to access the app from outside your OpenShift installation, you have to expose the askanswerapp service:
 
 ```shell
-oc expose aapo --hostname=www.example.com
+oc expose askanswerapp --hostname=www.example.com
 ```
 
 #### To deploy the sample application to AWS or Container
