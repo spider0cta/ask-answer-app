@@ -28,7 +28,8 @@ mvn spring-boot:run
 To deploy the sample application to OpenShift you can use the [OpenShift CLI](https://docs.openshift.org/latest/cli_reference/index.html):
 
 ```shell
-oc new-app codecentric/springboot-maven3-centos~https://github.com/Urodacus/ask-answer-portal
+oc new-app codecentric/springboot-maven3-centos~https://github.com/Urodacus/ask-answer-app
+
 ```
 
 This will create:
