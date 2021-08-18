@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:fragment="head(title)">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title th:text="${title}">Ask-Answer Portal</title>
+    <title th:text="${title}">Springit - Spring Boot Reddit & Stackoverflow Clone</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" th:href="@{/libs/bootstrap/css/bootstrap.min.css}"/>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" th:href="@{/css/Aapo.css}">
+    <link rel="stylesheet" th:href="@{/css/springit.css}">
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Roboto" >
     <!-- Font Awesome (for icons) -->
@@ -22,7 +22,7 @@
     <div class="container">
         <a class="navbar-brand" href="/">
             <i class="fa fa-leaf" aria-hidden="true"></i>
-            AAPO
+            SPRINGIT
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -37,26 +37,27 @@
                 </li>
 
                 <!-- if user is signed in -->
-                <li class="nav-item">
+                <li class="nav-item" sec:authorize="isAuthenticated()">
                     <a class="nav-link" th:href="@{/link/submit}">
                         <i class="fa fa-link" aria-hidden="true"></i> Submit Link</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../auth/profile.html">
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/profile}">
                         <i class="fa fa-user" aria-hidden="true"></i> Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out</a>
+                    <form method="POST" th:action="@{/logout}" sec:authorize="isAuthenticated()">
+                        <button class="nav-link"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out</button>
+                    </form>
                 </li>
 
                 <!-- if user is not signed in -->
-                <li class="nav-item">
-                    <a class="nav-link" href=../auth/login.html>
+                <li class="nav-item" sec:authorize="!isAuthenticated()">
+                    <a class="nav-link" th:href="@{/login}">
                         <i class="fa fa-sign-in-alt" aria-hidden="true"></i> Sign In</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../auth/register.html">
+                <li class="nav-item" sec:authorize="!isAuthenticated()">
+                    <a class="nav-link" th:href="@{/register}">
                         <i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
                 </li>
             </ul>
@@ -66,11 +67,10 @@
 
 <div class="jumbotron jumbotron-fluid" th:fragment="jumbotron">
     <div class="container" align="center">
-        <h2 class="display-4">Spring Boot Reddit Clone</h2>
-        <p class="lead">This is a reddit clone built using <a href="#">Spring Boot 2</a>, <a href="#"></a>Spring Framework 5</a>
-            <a href="#"></a>.</p>
+        <h2 class="display-4">Spring Boot Reddit & Stackoverflow Clone</h2>
+        <p class="lead">This is a reddit clone built using <a href="#">Spring Boot 2</a>, <a href="#"></a>Spring Framework 5</a>.</p>
         <a href="https://github.com/Urodacus/ask-answer-app" class="btn btn-success" target="_blank"><i class="fab fa-github"></i>  Github Repo</a>
-        <a href="https://github.com/cfaddict/springit-templates" class="btn btn-success" target="_blank"><i class="fas fa-graduation-cap"></i> UI Template</a>
+        <a href="https://github.com/danvega/springit-templates" class="btn btn-success" target="_blank"><i class="fas fa-graduation-cap"></i> UI Template</a>
     </div>
 </div>
 

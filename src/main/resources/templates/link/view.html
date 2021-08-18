@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="~{layouts/main_layout :: head(title = 'Springit - Spring Boot Reddit Clone')}">
@@ -26,7 +25,7 @@
                 <a class="title " th:href="${link.url}" th:text="${link.title}" target="_blank">
                     What's new in Spring Boot 2?
                 </a>
-                <span class="domain">(<a th:href="${link.url}" th:text="${link.getDomainName()}">therealdanvega.com</a>)</span>
+                <span class="domain">(<a th:href="${link.url}" th:text="${link.getDomainName()}">github.com</a>)</span>
             </p>
             <p class="tagline ">submitted
                 <time th:title="${link.getCreationDate()}" th:datetime="${link.getCreationDate()}" class="live-timestamp" th:text="${link.getPrettyTime()}">1 hour(s)</time> by

@@ -15,7 +15,6 @@ button.nav-link {
     cursor: pointer;
 }
 
-
 body {
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
@@ -108,7 +107,7 @@ a.share {
     padding:0px;
 }
 .comment .permalink {
-    
+
 }
 .comment .like {
     padding-left:10px;
