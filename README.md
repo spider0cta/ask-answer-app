@@ -1,25 +1,36 @@
-Ask - Answer Portal
-====================
+# Redit -Stackoverflow Clone
 
-[Spring Boot](http://projects.spring.io/spring-boot/) FullStack App [Stackoverflow - Reddit Clone].
+Ask-Answers is a fullstack Redit - Stackoverflow Clone . this project is useful for learning and experimenting with Spring 5 , Spring Boot ,Spring Security , Thymeleaf  and JPA.
 
+The Application is implemented as a [Spring Boot](https://projects.spring.io/spring-boot/) app running an embedded version of Tomcat. the data storage is [H2 Database](https://www.h2database.com/) which is an in-memory database And 
+[MySql](https://www.mysql.com/) Database accessed via [Spring JPA](https://projects.spring.io/spring-data-jpa/).
 
-## Requirements
+## Built With
 
-For building and running the application you need
+* 	[Maven](https://maven.apache.org/) - Dependency Management
+* 	[JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) - Java™ Platform, Standard Edition Development Kit
+* 	[Spring Boot](https://spring.io/projects/spring-boot) - Framework to ease the bootstrapping and development of new Spring Applications
+* 	[Mysql](https://www.mysql.com/) - Open-Source Relational Database Management System
+* 	[git](https://git-scm.com/) - Free and Open-Source distributed version control system
+*   [Bootstrap](https://getbootstrap.com/) - front-end open source toolkit
+*   [thymeleaf](http://thymeleaf.org/) - server-side Java template engine
+*   [Spring Security](https://spring.io/projects/spring-security) -Spring Security is a powerful and highly customizable authentication and access-control framework
+## External Tools Used
 
-- [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- [Maven 3](https://maven.apache.org)
+* [Postman](https://www.getpostman.com/) - API Development Environment (Testing Docmentation)
 
+### UI Template 
+[Front End Ui](https://github.com/danvega/springit-templates) - springit-templates
+Spring Reddit Clone Layouts & Templates
+# Database Configuration
+Ask-Answer app  uses an in-memory database (H2) seeded with a commandLineRunner. The h2 console is automatically exposed at http://localhost:1010/h2-console and it is possible to inspect the content of the database using the jdbc:h2:mem:testdb url.
 
-## Running the application locally
+A similar setup is provided for Mysql in properties file in case a persistent database configuration is needed.
 
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `dev.muhammad.askanswerapp.AskAnswerAppApplication.java` class from your IDE.
+first you need to create a local database[Schema] called askanswer using mysql command Line.
 
-Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
-
-```shell
-mvn spring-boot:run
+```
+create database askanswer;
 ```
 
 ## Deploying the application to OpenShift or AWS
@@ -52,6 +63,53 @@ you can check these links :
 * [Deploying on AWS Using AWS Elastic Beanstalk](https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/)
 * [Deploying a Spring Boot Application - docs](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html)
 
-#### Note :
- - consider adding bootstrap js - css lib in the lib dir 
- - configure the missing tables in your local db
+
+
+### maven
+
+Build Spring Boot Project with Maven `mvn install / mvn clean install`
+
+run spring boot using maven : `mvn spring-boot:run`
+
+or load it into your ide then run it. 
+
+access it via local host after configuring the port in properties file . 
+``` 
+ server.port = <<port number>>
+```
+
+
+# Contributions and Future improvements
+
+#### In case you find a bug or have a suggested improvement
+The [issue tracker](https://github.com/Urodacus/ask-answer-app/issues) is the preferred channel for bug reports, features requests and submitting pull requests.
+
+## finished
+
+- [x] RESTful Web Service
+- [x] Bootstrap - CSS
+- [x] Web - Thymeleaf, JavaScript
+- [x] Spring Data JPA
+- [x] H2 
+- [x] Spring AOP
+- [x] Spring boot Security
+- [x] Authentication 
+- [x] Actuator
+- [x] MySql Configuration 
+
+## sample screenshot of the non-completed app
+
+![home](./screenshots/1.png)
+![home](./screenshots/2.png)
+![home](./screenshots/3.png)
+![home](./screenshots/4.png)
+![home](./screenshots/5.png)
+
+
+### Contributions can be made by following these steps:
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
