@@ -97,7 +97,7 @@ The [issue tracker](https://github.com/Urodacus/ask-answer-app/issues) is the pr
 - [x] Actuator
 - [x] MySql Configuration 
 
-## sample screenshot of the non-completed app
+## sample screenshot of the completed app
 
 ![home](./screenshots/1.png)
 ![home](./screenshots/2.png)
